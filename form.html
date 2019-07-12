@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>All Form Input</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="fstyle.css">
+	</head>
+	<body>
+		<div id="cls">
+			<form novalidate class="narrow">
+				<h2 class="h3">Search</h2>
+
+
+				<input type="search" 
+				id="search-text" 
+				class="form-control" 
+				placeholder="Search" 
+				autofocus >
+				
+			</form><br>
+			<form class="narrow">
+
+				<input type="text" 
+				id="name-text"
+				placeholder="First and Last Name"
+				required
+				pattern="(.*)\s(.*)"
+				class="form-control">
+
+				<input type="email" 
+				id="email-text"
+				placeholder="Email"
+				required
+				class="form-control">
+
+				<input type="tel" 
+				id="phone-text" 
+				placeholder="Phone Number"
+				pattern="[0-9]{11}" 
+				required
+				class="form-control">
+
+				<input type="url" 
+				id="phone-text"
+				placeholder="Web Address"
+				class="form-control">
+
+				<h2 class="h3">Preferences</h2>
+
+				<input type="number"
+				id="bedrooms-text"
+				placeholder="# of bedrooms"
+				min="1" max="6"
+				class="form-control">
+
+				<h3 class="h4">Days Until Available to Move</h3>
+				<div class="range">
+					<div class="col-sm-6">
+						<input type="range" 
+						id="move-range"
+						min="0" max="120"
+						step="10" value="30">
+					</div>
+					<div class="col-sm-4">
+						<span id="move-value">30</span>
+					</div>
+				</div>
+
+				<input type="text" 
+				id="direction-list"
+				list="direction-data"
+				placeholder="Directional Preferences"
+				class="form-control">
+
+				<datalist id="direction-data">
+					<option value="North"></option>
+					<option value="South"></option>
+					<option value="East"></option>
+					<option value="West"></option>
+				</datalist>
+
+				<input type="color" 
+				id="main-color"
+				value="#ffffff"
+				class="form-control push-down-top">
+
+				<h2 class="h3">Available Date</h2>
+
+				<input type="month" 
+				class="form-control"
+				value="2016-06">
+
+				<input type="week" 
+				class="form-control" 
+				value="2016-W26">
+
+				<input type="datetime -local" 
+				class="form-control"
+				value="2016-06-26T09:30:00">
+				<br>
+
+				<div class="push-down-top">
+					<button class="btn-cus"><span>Cancel</span></button>
+					<button type="submit" class="btn-cus"><span>Save</span></button>
+				</div>
+				<br>
+				<script type="text/javascript" src="./range.js"></script>
+			</form>
+		</div>
+	</body>
+</html>
